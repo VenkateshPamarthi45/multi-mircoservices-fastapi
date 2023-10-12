@@ -1,0 +1,17 @@
+services:
+  orders:
+    image: orders
+    container_name: orders
+    environment:
+      PORT: 8002
+    ports:
+      - '8002:8002'
+    restart: "no"
+  products:
+    image: products
+    container_name: products
+    environment:
+      PORT: 8000
+    ports:
+      - '8000:8000'
+    restart: "no"
